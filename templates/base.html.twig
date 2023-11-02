@@ -1,18 +1,142 @@
 <!DOCTYPE html>
-<html>
-    <head>
-        <meta charset="UTF-8">
-        <title>{% block title %}Welcome!{% endblock %}</title>
-        <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 128 128%22><text y=%221.2em%22 font-size=%2296%22>⚫️</text></svg>">
-        {% block stylesheets %}
-            {{ encore_entry_link_tags('app') }}
-        {% endblock %}
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <title>Terre d'Afrique</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="icon" href="chemin/vers/votre/favicon.png" type="image/png">
+    <link rel="stylesheet" href="{{ asset('css/app.css') }}">
+    <style>
+        body { background-color: #357C62; }
+    </style>
+</head>
+<body class="light">
+    <nav class="navbar navbar-expand-lg navbar-light;">
+        <div class="container">
+            <a class="navbar-brand" href="#">
+                <img src="chemin/vers/votre/logo.png" alt="Logo" style="max-height: 40px;">
+            </a>
+            <div class="collapse navbar-collapse">
+                <ul class="navbar-nav mr-auto">
+                    <li class="nav-item">
+                        <a class="nav-link text-gold" href="#">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class "nav-link text-gold" href="#">Evenement</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-gold" href="#">Engagement</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-gold" href="#">Contact</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <div class="titre"</div>
+        <h1>Association Terre d'Afrique</h1>
 
-        {% block javascripts %}
-            {{ encore_entry_script_tags('app') }}
-        {% endblock %}
-    </head>
-    <body>
-        {% block body %}{% endblock %}
-    </body>
-</html>
+    <div class="container mt-5 green-background">
+        <div class="row">
+            <div class="col-md-4">
+                <img src="chemin/vers/votre/photo.png" alt="Photo" style="margin-top: -20px;">
+            </div>
+            <div class="col-md-8">
+                {% block content_title %}{% endblock %}
+                <p class="text-center text-gold">La jeunesse rurale préserve et développe durablement les terroirs.</p>
+                <div class="text-center">
+                    <a href="#" class="btn btn-3d btn-rounded">Cliquez pour faire un don</a>
+                </div>
+            </div>
+        </div>
+
+        <hr style="background-color: #CBB26A; height: 5px;">
+
+        <div class="row mt-4">
+            <div class="col-md-4">
+                <div class="card custom-card">
+                    <img src="chemin/vers/votre/image.png" alt="Image" style="margin-top: -20px;">
+                    <div class="card-body">
+                        <h5 class="card-title">Nous allons organiser une rencontre!</h5>
+                        <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                        <a href="#" class="btn btn-success btn-rounded">Lire plus</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <!-- Deuxième carte existante -->
+            </div>
+            <div class="col-md-4">
+                <div class="card custom-card">
+                    <img src="chemin/vers/votre/image.png" alt="Image" style="margin-top: -20px;">
+                    <div class="card-body">
+                        <h5 class="card-title">Nouvelle Carte</h5>
+                        <p class="card-text">Personnalisez le contenu de votre nouvelle carte ici.</p>
+                        <a href="#" class="btn btn-success btn-rounded">Lire plus</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <hr style="background-color: #CBB26A; height: 5px;">
+
+        <h2 class="text-center text-gold mt-4">Nos Actus</h2>
+        <div class="row mt-4">
+            <div class="col-md-4">
+                <div class="card custom-card">
+                    <!-- Image dépassant vers le haut à gauche -->
+                    <div class="card-body">
+                        <h5 class="card-title">Nos partenaires</h5>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card custom-card">
+                    <!-- Image dépassant vers le haut à droite -->
+                    <div class="card-body">
+                        <h5 class="card-title">Mobilisation de la jeunesse</h5>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer class="custom-footer" style="background-color: #476140;">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6">
+                    <img src="chemin/vers/votre/logo-footer.png" alt="Logo" style="max-height: 40px;">
+                </div>
+                <div class="col-md-6 text-center text-gold">
+                    &copy; Tous droits réservés TerreAFrique.org
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <label class="day-night">
+        <input type="checkbox" checked />
+        <div></div>
+    </label>
+
+    <!-- twitter -->
+    <script>
+    // Dark & Light toggle
+    const cards = document.querySelectorAll(".card");
+
+    cards.forEach((card) => {
+        const toggleInput = card.querySelector(".day-night input");
+
+        toggleInput.addEventListener("change", () => {
+        card.classList.add("toggle");
+        setTimeout(() => {
+            card.classList.toggle("light");
+
+            setTimeout(() => card.classList.remove("toggle"), 10);
+        }, 5);
+        });
+    });
+    </script>

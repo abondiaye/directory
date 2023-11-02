@@ -1,1 +1,157 @@
 @import "bootstrap/scss/bootstrap";
+
+/* app.scss */
+
+/* Importation des fichiers CSS Bootstrap */
+@import '~bootstrap/dist/css/bootstrap.css';
+@import '~bootstrap/dist/css/bootstrap-theme.css';
+
+/* Vos styles personnalisés */
+/* Couleur Or avec effet de dégradé brillant */
+.titre h1 {
+    text-align: center;
+    color: #FFD700; /* Couleur Or */
+    background-image: linear-gradient(45deg, #FFD700, #FFEA00); /* Dégradé brillant */
+}
+/* Dans votre fichier CSS (par exemple, app.css) */
+
+.text-gold {
+    color: #FFD700; /* Couleur Or */
+    background-image: linear-gradient(45deg, #FFD700, #FFEA00); /* Dégradé brillant */
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+}
+
+/* Bouton rond à droite avec couleur Or */
+.round-btn {
+    background-color: #FFD700; /* Couleur Or */
+    border: none;
+    border-radius: 50%;
+    width: 100px;
+    height: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    color: #357C62; /* Couleur de fond */
+}
+
+/* Carte avec titre et bouton de couleur CBB26A */
+.custom-card {
+    background-color: #cb6ac5;
+    * {
+        box-sizing: border-box;
+        }
+
+        html {
+        font-family: sans-serif;
+        font-weight: 300;
+        color: hsl(0 0% 15%);
+        }
+
+        h2 {
+        font-weight: 400;
+        margin: 2rem 0 0.25rem 0;
+        }
+        h1 {
+        position: fixed;
+        right: 1rem;
+        bottom: 1rem;
+        opacity: 0.5;
+        margin: 0;
+        }
+
+        p {
+        margin: 0;
+        }
+    
+        body {
+        display: grid;
+        place-items: center;
+        min-height: 100vh;
+        }
+    
+        figure {
+        width: 500px;
+        aspect-ratio: 8 / 5;
+        --bg: hsl(330 80% calc(90% - (var(--hover) * 10%)));
+        --accent: hsl(280 80% 40%);
+        transition: background 0.2s;
+        background:
+            radial-gradient(circle at top left, var(--accent), transparent 75%),
+            var(--bg);
+        margin: 0;
+        position: relative;
+        overflow: hidden;
+        border-radius: 1.5rem;
+        }
+        figure:after {
+        content: "";
+        position: absolute;
+        width: 20%;
+        aspect-ratio: 1;
+        border-radius: 50%;
+        bottom: 0%;
+        left: 10%;
+        background: linear-gradient(-65deg, var(--bg) 50%, var(--accent) 50%);
+        filter: blur(25px);
+        transform:
+          translateX(calc(var(--hover) * 15%))
+          scale(calc(1 + (var(--hover) * 0.2)));
+        transition: transform 0.2s, background 0.2s;
+        }
+
+        img {
+        position: absolute;
+        left: 20%;
+        top: 15%;
+        width: 40%;
+        transform:
+          translateX(calc(var(--hover) * -15%))
+          scale(calc(1 + (var(--hover) * 0.2)));
+        transition: transform 0.2s;
+        }
+
+        article {
+        --hover: 0;
+        }
+
+        article:hover {
+        --hover: 1;
+      } /* Couleur CBB26A */
+    border: none;
+}
+
+/* Bande de couleur Or pour les titres de section */
+.section-title {
+    background-color: #FFD700; /* Couleur Or */
+    display: inline-block;
+    padding: 5px 10px;
+    color: #357C62; /* Couleur de texte */
+    border-radius: 5px;
+}
+
+/* Footer avec couleur de fond et texte doré */
+.custom-footer {
+    background-color: #476140; /* Couleur du footer */
+    color: #FFD700; /* Couleur Or */
+}
+
+/* Bouton avec effet 3D */
+.btn-3d {
+    background: linear-gradient(45deg, #007BFF, #00A5B8);
+    border: 2px solid #007BFF;
+    box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+    transition: transform 0.2s;
+}
+
+.btn-3d:hover {
+    transform: translate(2px, 2px);
+}
+
+/* Bouton rond */
+.btn-rounded {
+    border-radius: 50px;
+    padding: 10px 20px;
+}

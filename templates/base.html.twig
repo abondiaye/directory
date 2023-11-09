@@ -2,162 +2,205 @@
 <html lang="fr">
 <head>
     <meta charset="UTF-8">
-    <title>Terre d'Afrique</title>
+    <title>Terre Afrique - Aide aux familles orphelines et veuves</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="icon" href="public/images/logo.jpeg" type="image/png">
     <link rel="stylesheet" href="style.css">
     <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
+    <link rel="stylesheet" href="/build/app.css">
 
-    <script src="asset/js/app.js"></script>
+</head>
+<body>
 
-    <!-- Avant la balise </body> -->
-<link rel="stylesheet" href="{{ asset('/build/app.css') }}">
-    <style>
-        body { background-color: #357C62; }
-    </style>
-            <hr style="background-color: #CBB26A; height: 4px;">
-
-    </head>
-    <div class="button-container">
-        <button class="button">
-            <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 1024 1024" stroke-width="0" fill="currentColor" stroke="currentColor" class="icon">
-            <path d="M946.5 505L560.1 118.8l-25.9-25.9a31.5 31.5 0 0 0-44.4 0L77.5 505a63.9 63.9 0 0 0-18.8 46c.4 35.2 29.7 63.3 64.9 63.3h42.5V940h691.8V614.3h43.4c17.1 0 33.2-6.7 45.3-18.8a63.6 63.6 0 0 0 18.7-45.3c0-17-6.7-33.1-18.8-45.2zM568 868H456V664h112v204zm217.9-325.7V868H632V640c0-22.1-17.9-40-40-40H432c-22.1 0-40 17.9-40 40v228H238.1V542.3h-96l370-369.7 23.1 23.1L882 542.3h-96.1z"></path>
-            </svg>
-        </button>
-        <button class="button">
-            <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" aria-hidden="true" viewBox="0 0 24 24" stroke-width="2" fill="none" stroke="currentColor" class="icon">
-            <path d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" stroke-linejoin="round" stroke-linecap="round"></path>
-            </svg>
-        </button>
-        <button class="button">
-            <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24" stroke-width="0" fill="currentColor" stroke="currentColor" class="icon">
-            <path d="M12 2.5a5.5 5.5 0 0 1 3.096 10.047 9.005 9.005 0 0 1 5.9 8.181.75.75 0 1 1-1.499.044 7.5 7.5 0 0 0-14.993 0 .75.75 0 0 1-1.5-.045 9.005 9.005 0 0 1 5.9-8.18A5.5 5.5 0 0 1 12 2.5ZM8 8a4 4 0 1 0 8 0 4 4 0 0 0-8 0Z"></path>
-            </svg>
-        </button>
-
-        <button class="button">
-            <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" stroke-linejoin="round" stroke-linecap="round" viewBox="0 0 24 24" stroke-width="2" fill="none" stroke="currentColor" class="icon">
-            <circle r="1" cy="21" cx="9"></circle>
-            <circle r="1" cy="21" cx="20"></circle>
-            <path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"></path>
-            </svg>
-        </button>
+    <nav class="navbar text-gold custom-navbar-bg">
+    <div class="navbar-logo">
+        <a href="#">
+            <img src="{{ asset('images/logo.png') }}" alt="Logo de Terre d'Afrique" width="150" height="100">
+        </a>
+    </div>
+    <div class="navbar-links">
+        <div class="nav-icon">
+            <a href="#accueil">
+                <img src="{{ asset('images/Home.png') }}" alt="Accueil">
+                <span>Accueil</span> <!-- Acceuil -->
+            </a>
         </div>
-
-<body class="light">
-    <nav class="navbar navbar-expand-lg navbar-light" style="background-color: #357C62;">
-        <div class="container justify-content-center">
-            <a class="navbar-brand" href="#">
-                <img src="{{ asset('images/logo.png') }}" alt="Mon image principale">
-            <div class="collapse navbar-collapse">
-    <div class="collapse navbar-collapse">
-    <ul class="navbar-nav ml-auto d-flex align-items-center">
-        <li class="nav-item">
-            <a class="nav-link text-gold" href="#">Home</a>
-        </li>
-        <li class="nav-item">
-            <a class="nav-link text-gold" href="#">Evenement</a>
-        </li>
-        <li class="nav-item">
-            <a class="nav-link text-gold" href="#">Engagement</a>
-        </li>
-        <li class="nav-item">
-            <a class="nav-link text-gold" href="#">Contact</a>
-        </li>
-    </ul>
-    
-</div>
-
-</div>
-
-            </div>
+        <div class="nav-icon">
+            <a href="#engagements">
+                <img src="{{ asset('images/engagement.jpeg') }}" alt="Nos Engagements">
+                <span>Nos Engagements</span> <!-- Engagements-->
+            </a>
         </div>
-    </nav>
-    <div class="titre text-center">
-        <h1>Association <br/>Terre d'Afrique</h1></br>
+        <div class="nav-icon">
+            <a href="#membres">
+                <img src="{{ asset('images/Membres.png') }}" alt="Membres">
+                <span>Membres</span> <!-- Membres -->
+            </a>
+        </div>
+        <div class="nav-icon">
+            <a href="#footer">
+                <img src="{{ asset('images/ConTact.png') }}" alt="Contact">
+                <span>Contact</span> <!-- Contact -->
+            </a>
+        </div>
+        <div class="nav-icon">
+            <a href="#login">
+                <img src="{{ asset('images/login-icon-png-19.jpg') }}" alt="login">
+                <span>Login</span> <!-- login -->
+            </a>
+        </div>
+    </div>
+</nav>
+
+
+
+
+
+    <div id="accueil" class="titre text-center">
+        <h1 id="accueil-title" style="color: #CBB26A; text-align: center; font-family: Montserrat; font-size: 6rem; font-style: normal; font-weight: 900; line-height: 106.4%;">Association <br/>Terre <br/>d'Afrique</h1>
     </div>
 
-    <div class="container mt-5 green-background">
+
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/gsap.min.js"></script>
+
+    
+    <div class="container mt-5 green-background d-flex justify-content-center"> 
         <div class="row">
             <div class="col-md-4 text-center">
-                <img src="chemin/vers/votre/photo.png" alt="Photo" style="margin-top: -20px;">
             </div>
             <div class="col-md-8 text-center">
                 {% block content_title %}{% endblock %}
-                <p class="text-center text-gold">La jeunesse rurale préserve <br>et développe durablement les terroirs.</br></p>
+            <p id="animated-text" class="text-center text-gold" style="display: flex; width: 65.75rem; height: 13.82644rem; flex-direction: column; justify-content: center; flex-shrink: 0; color: #FFF; text-align: center; font-family: Montserrat; font-size: 3rem; font-style: normal; font-weight: 900; line-height: 106.4%;">La jeunesse rurale préserve <br>et développe durablement les terroirs.</p>
+                    <hr style="background-color: #CBB26A; height: 4px;">
+
             </div>
         </div>
-
-        <hr style="background-color: #CBB26A; height: 5px;">
-        
-        <div class="row mt-4">
-            <div class="col-md-4 text-center">
-                <div class="card custom-card">
-                <img src="{{ asset('images/img1.png') }}" alt="Mon image principale">
-                    <div class="card-body">
-                        <h5 class="card-title">Nous organisons des rencontres!</h5>
-                        <p class="card-text">Lorem ipsum dolor sit amet,  ipsum dolor sit amet, consectetur adipiscing elit.
-                            ipsum dolor sit amet, consectetur adipiscing elit.consectetur adipiscing elit.</p>
-                        <a href="#" class="btn btn-success btn-rounded">Lire plus</a>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-4">
-                <!-- Deuxième carte existante -->
-            </div>
-    
-    <div class="image-container">
-    <img class="round-image" src="{{ asset('images/triple.png') }}" alt="haut">
-    <div class="image-info">
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
     </div>
-</div>
+            <div class="card custom-card" style="width: 400px;">
+                <img src="{{ asset('images/img1.png') }}" alt="Mon image principale">
+                <div class="card-body">
+                    <h5 class="card-title">Nous organisons <br>des rencontres!</h5>
+                    <p class="card-text">Lorem ipsum dolor sit amet, ipsum dolor sit amet, consectetur adipiscing elit. ipsum dolor sit amet, consectetur adipiscing elit.consectetur.</p>
+                    <a href="#" class="btn btn-success btn-rounded">Lire plus</a>
+                </div>
+        </div>
 
-
-
-
-
-
-        <hr style="background-color: #CBB26A; height: 4px;">
 
         <h2 class="text-center text-gold mt-4">Nos Actus</h2>
         <div class="row mt-4">
             <div class="col-md-4 text-center">
-                <div class="card custom-card">
-                    <!-- Image dépassant vers le haut à gauche -->
-                    <div class="card-body">
-                                    <img src="{{ asset('images/parteneraire.jpeg') }}" alt="#">
-                        <h5 class="card-title">Nos partenaires</h5>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-                    </div>
+                <div class="card custom-card" style="width: 400px;">
+                    <img src="{{ asset('images/parteneraire.jpeg') }}" alt="#">
+                    <h2 class="card-title text-gold mt-4">Nos partenaires</h2> <!-- Ajout de text-gold et mt-4 -->
+                    <p>Lorem <br>ipsum dolor sit amet.<br> consectetur <br>adipiscing elit.</p>
                 </div>
             </div>
+                    <hr style="background-color: #CBB26A; height: 4px;">
+
             <div class="col-md-4 text-center">
-            <h2 class="text-center text-gold mt-4">Nos Engagements</h2>
-                <div class="card custom-card">
-                    <!-- Image dépassant vers le haut à droite -->
-        <h2 class="card-title">Mobilisation de la jeunesse</h2>
+                <h2 class="text-center text-gold mt-4">Nos Engagements</h2> <!-- Centrer le titre -->
+                <div class="card custom-card" style="width: 400px;">
+                    <h2 class="card-title">Mobilisation de la jeunesse</h2>
                     <div class="card-body">
-                            <img src="{{ asset('images/joie_enfant.png') }}" alt="#">
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.Lorem ipsum dolor sit amet, consectetur adipiscing elit.Lorem ipsum dolor sit amet, consectetur adipiscing elit.Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                        <img src="{{ asset('images/joie_enfant.png') }}" alt="#">
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.Lorem ipsum dolor sit amet, consectetur
+                            adipiscing elit.Lorem ipsum dolor sit amet.</p>
                     </div>
                 </div>
             </div>
         </div>
     </div>
-        
-        <img src="{{ asset('images/logo2.png') }}" alt="Mon image principale">
-            </div>
-    <div class="input-div">
-        <input class="input" name="file" type="file">
-        <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" stroke-linejoin="round" stroke-linecap="round" viewBox="0 0 24 24" stroke-width="2" fill="none" stroke="currentColor" class="icon"><polyline points="16 16 12 12 8 16"></polyline><line y2="21" x2="12" y1="12" x1="12"></line><path d="M20.39 18.39A5 5 0 0 0 18 9h-1.26A8 8 0 1 0 3 16.3"></path><polyline points="16 16 12 12 8 16"></polyline></svg>
-    </div>
+<footer id="footer" class="text-center text-gold">
+    &copy; Tous droits réservés TerreAFrique.org
+    <img src="{{ asset('images/logo2.png') }}" alt="Logo de Terre d'Afrique" width="150" height="100">
+</footer>
 
 
-        <div class="col-md-6 text-center text-gold">
-                    &copy; Tous droits réservés TerreAFrique.org
-                </div>
-                
+
+    <script src="{{ asset('js/app.js') }}" defer></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/gsap.min.js" defer></script>
+
+<script>
+    document.addEventListener("DOMContentLoaded", function() {
+        const navbar = document.querySelector(".navbar");
+        const scrollStyles = {
+            backgroundColor: "#357C62",
+            boxShadow: "0 4px 6px rgba(0, 0, 0, 0.1)",
+        };
+        const originalStyles = {
+            backgroundColor: "transparent",
+            boxShadow: "none",
+        };
+
+        function handleScroll() {
+            if (window.scrollY > 100) {
+                gsap.to(navbar, { duration: 0.3, ...scrollStyles });
+            } else {
+                gsap.to(navbar, { duration: 0.3, ...originalStyles });
+            }
+        }
+
+        window.addEventListener("scroll", handleScroll);
+    });
+</script>
+
+<script>
+    document.addEventListener("DOMContentLoaded", function() {
+        const title = document.getElementById("accueil-title");
+
+        gsap.from(title, {
+            duration: 1.5, // Durée de l'animation en secondes
+            opacity: 0, // Démarre avec une opacité de 0
+            y: 100, // Démarre à 100 pixels en dessous de sa position initiale
+            ease: "power4.out", // Type d'animation d'easing (facultatif)
+            onComplete: function() {
+                // Cette fonction sera appelée une fois l'animation terminée
+                title.style.opacity = 1; // Assurez-vous que l'opacité est réinitialisée à 1
+            }
+        });
+    });
+</script>
+<script>
+    // Sélectionnez l'élément du titre
+    const titre = document.querySelector('h1');
+
+    // Créez une animation GSAP pour le titre
+    gsap.from(titre, {
+        opacity: 0, // Commencez avec une opacité de 0 (invisible)
+        y: 30, // Déplacez le titre vers le bas de 30 pixels
+        duration: 1, // Durée de l'animation en secondes
+        ease: 'power2.out', // Courbe d'animation (facultatif)
+        delay: 0.5 // Délai avant le démarrage de l'animation (facultatif)
+    });
+</script>
+<script>
+    // Sélectionnez tous les éléments avec data-card="zoom"
+    const cardsToAnimate = document.querySelectorAll('[data-card="zoom"]');
+
+    // Fonction pour créer l'animation de zoom
+    function createZoomAnimation(card) {
+        const tl = gsap.timeline({ paused: true });
+        tl.to(card, { scale: 1.05, duration: 0.3 }); // Zoom légèrement au survol
+
+        card.addEventListener('mouseenter', () => {
+            tl.play(); // Lancez l'animation au survol
+        });
+
+        card.addEventListener('mouseleave', () => {
+            tl.reverse(); // Inversez l'animation lorsque la souris quitte la carte
+        });
+    }
+
+    // Appliquez l'animation de zoom à chaque carte
+    cardsToAnimate.forEach((card) => {
+        createZoomAnimation(card);
+    });
+</script>
+
+
 </body>
+
 </html>
-    </footer>
+
+
+

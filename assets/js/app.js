@@ -92,6 +92,20 @@ document.addEventListener("DOMContentLoaded", function () {
         tl.reverse();
         });
     });
+    // ... Votre code JavaScript existant ...
+
+window.addEventListener('scroll', function() {
+    var element = document.getElementById('accueil-title');
+    var position = element.getBoundingClientRect();
+
+    // Vérifier si l'élément est visible
+    if(position.top < window.innerHeight && position.bottom >= 0) {
+        element.style.animation = 'titreScroll 1s forwards';
+    } else {
+        element.style.animation = 'none';
+    }
+});
+
 
     var swiper = new Swiper('.swiper-container', {
         slidesPerView: 1,

@@ -1,0 +1,7 @@
+    {
+            "php.serveFromWorkspace": true,
+            "php.validate.executablePath": "/Applications/MAMP/bin/php/php7.4.9/bin/php", // Remplacez par votre chemin réel
+            "php.server.root": "/Applications/MAMP/htdocs"
+    
+    }
+    

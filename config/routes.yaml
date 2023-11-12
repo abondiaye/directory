@@ -1,5 +1,50 @@
-controllers:
-    resource:
-        path: ../src/Controller/
-        namespace: App\Controller
-    type: attribute
+framework:
+    router:
+        utf8: true
+
+        # Configure how to generate URLs in non-HTTP contexts, such as CLI commands.
+        # See https://symfony.com/doc/current/routing.html#generating-urls-in-commands
+        #default_uri: http://localhost
+
+when@prod:
+    framework:
+        router:
+            strict_requirements: null
+
+# Path: config/routes.yaml
+list_articles:
+    path: /articles
+    controller: App\Controller\ArticleController::list
+
+
+add_article:
+    path: /articles/add
+    controller: App\Controller\ArticleController::add
+
+edit_article:
+    path: /articles/edit/{id}
+    controller: App\Controller\ArticleController::edit
+
+delete_article:
+    path: /articles/delete/{id}
+    controller: App\Controller\ArticleController::delete
+
+list_categories:
+    path: /categories
+    controller: App\Controller\CategoryController::list
+
+add_category:
+    path: /categories/add
+    controller: App\Controller\CategoryController::add
+
+edit_category:
+    path: /categories/edit/{id}
+    controller: App\Controller\CategoryController::edit
+
+delete_category:
+    path: /categories/delete/{id}
+    controller: App\Controller\CategoryController::delete
+
+registration:
+    path: /registration
+    controller: App\Controller\RegistrationController::register

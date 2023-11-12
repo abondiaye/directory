@@ -30,4 +30,7 @@ doctrine:
                 prefix: 'App\Entity'
                 alias: App
 
-        # Définissez ici les configurations pour les environnements 'test' et 'prod' si nécessaire.
+# Path: config/packages/security.yaml        
+    entities:
+            App\Entity\Categorie: ~
+            App\Entity\Article: ~

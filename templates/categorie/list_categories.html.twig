@@ -1,0 +1,19 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Liste des Catégories{% endblock %}
+
+{% block body %}
+    <h1>Liste des Catégories</h1>
+    <ul>
+        {% for categorie in categories %}
+            <li>
+                <a href="{{ path('categorie_show', {'id': categorie.id}) }}">{{ categorie.nom }}</a> <!-- lien pour afficher la catégorie -->
+                <a href="{{ path('categorie_edit', {'id': categorie.id}) }}">Modifier</a> <!-- lien pour modifier la catégorie -->
+                <a href="{{ path('categorie_delete', {'id': categorie.id}) }}">Supprimer</a> <!-- lien pour supprimer la catégorie -->
+
+            </li>
+        {% else %}
+            <li>Aucune catégorie trouvée</li>
+        {% endfor %}
+    </ul>
+{% endblock %}

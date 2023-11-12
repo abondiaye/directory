@@ -1,0 +1,24 @@
+{# templates/article/edit.html.twig #}
+
+{# Étend le layout de base #}
+{% extends 'base.html.twig' %}
+
+{# Définit le titre de la page en fonction de la création ou de la modification #}
+{% block title %}{{ is_edit ? 'Modifier' : 'Créer' }} un Article{% endblock %}
+
+{# Contenu principal de la page #}
+{% block body %}
+    <h1>{{ is_edit ? 'Modifier' : 'Créer' }} un Article</h1>
+    
+    {# Affiche le formulaire d'article #}
+    {{ form_start(form) }}
+        {{ form_widget(form) }}
+        <button class="btn">{{ is_edit ? 'Modifier' : 'Créer' }}</button>
+    {{ form_end(form) }}
+
+    {# Liens pour revenir à la liste des articles ou voir l'article en cours de modification #}
+    <a href="{{ path('article_index') }}">Retour à la liste</a>
+    {% if is_edit %}
+        <a href="{{ path('article_show', {'id': article.id}) }}">Voir cet article</a>
+    {% endif %}
+{% endblock %}
